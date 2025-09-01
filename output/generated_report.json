@@ -1,7 +1,7 @@
 {
-    "generated_at": "2025-09-01T10:36:21.460393+00:00",
+    "generated_at": "2025-09-01T23:04:22.052061+00:00",
     "overview": {
-        "num_records": 500,
+        "num_columns": 43,
         "columns": [
             "timestamp",
             "cpu_usage",
@@ -19,7 +19,33 @@
             "power_consumption_watts",
             "service_status.database",
             "service_status.api_gateway",
-            "service_status.cache"
+            "service_status.cache",
+            "usage_index",
+            "network_index",
+            "database_online",
+            "database_degraded",
+            "database_offline",
+            "api_gateway_online",
+            "api_gateway_degraded",
+            "api_gateway_offline",
+            "cache_online",
+            "cache_degraded",
+            "cache_offline",
+            "latency_ms_roll_mean",
+            "latency_ms_roll_std",
+            "latency_ms_z",
+            "cpu_usage_roll_mean",
+            "cpu_usage_roll_std",
+            "cpu_usage_z",
+            "memory_usage_roll_mean",
+            "memory_usage_roll_std",
+            "memory_usage_z",
+            "network_index_roll_mean",
+            "network_index_roll_std",
+            "network_index_z",
+            "error_rate_roll_mean",
+            "error_rate_roll_std",
+            "error_rate_z"
         ]
     }
 }
