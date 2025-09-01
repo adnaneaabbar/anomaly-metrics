@@ -1,0 +1,25 @@
+{
+    "generated_at": "2025-09-01T10:36:21.460393+00:00",
+    "overview": {
+        "num_records": 500,
+        "columns": [
+            "timestamp",
+            "cpu_usage",
+            "memory_usage",
+            "latency_ms",
+            "disk_usage",
+            "network_in_kbps",
+            "network_out_kbps",
+            "io_wait",
+            "thread_count",
+            "active_connections",
+            "error_rate",
+            "uptime_seconds",
+            "temperature_celsius",
+            "power_consumption_watts",
+            "service_status.database",
+            "service_status.api_gateway",
+            "service_status.cache"
+        ]
+    }
+}
