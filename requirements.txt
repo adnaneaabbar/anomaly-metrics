@@ -1,2 +1,7 @@
 numpy
 pandas
+langchain
+langchain-community
+langchain-core
+langsmith
+openai

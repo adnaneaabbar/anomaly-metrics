@@ -1,13 +1,12 @@
 from pathlib import Path
 from optimizer.pipeline import run
+from optimizer.recommend import recommend_actions
 
 if __name__ == "__main__":
     data_path = Path("data/rapport.json")
     out_dir = Path("output")
-    report, paths = run(data_path, out_dir)
+    paths = run(data_path, out_dir)
     
-    print("Report generated at:", paths["generated_report"])
-    print("Anomalies CSV at:", paths["anomalies_csv"])
-    print("Report Overview:", report["overview"])
-    print("Current Service Status:", report["current_service_status"])
-    print("KPIs:", report["kpis"])
+    print("Report generated at: ", paths["generated_report"])
+    print("Anomalies CSV generated at: ", paths["anomalies_csv"])
+    print("LLM Recommendations generated at: ", paths["recs_json"])

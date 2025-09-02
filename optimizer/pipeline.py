@@ -1,6 +1,6 @@
 from pathlib import Path
 from datetime import datetime, timezone
-from . import ingest, enrich, detect_anomalies, analyse, generate
+from . import ingest, enrich, detect_anomalies, analyse, recommend, generate
 
 def run(data_path: Path, out_dir: Path):
     # ingest, enrich, detect anomalies
@@ -16,6 +16,11 @@ def run(data_path: Path, out_dir: Path):
         # placeholder for actual work
         **summary
     }
-    paths = generate.generate(report, df_anoms, out_dir)
+
+    # get LLM recommendations
+    anomalies_csv_path = out_dir / "anomalies.csv"
+    recommendations = recommend.recommend_actions(report, anomalies_csv_path)
+
+    paths = generate.generate(report, df_anoms, out_dir, recommendations)
     
-    return report, paths
+    return paths
