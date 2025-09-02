@@ -1,103 +1,63 @@
 {
-    "report": {
-        "generated_at": "2025-09-02T03:51:33.030359+00:00",
-        "overview": {
-            "total_records": 500,
-            "warning_events": 74,
-            "critical_events": 68,
-            "analysis_period": {
-                "start_utc": "2023-10-01T12:00:00+00:00",
-                "end_utc": "2023-10-11T21:30:00+00:00"
-            }
-        },
-        "current_service_status": {
-            "database": "online",
-            "api_gateway": "online",
-            "cache": "online"
-        },
-        "kpis": {
-            "latency_ms_p95": 344.05,
-            "error_rate_p95": 0.12,
-            "peak_cpu_percent": 99.0,
-            "peak_memory_percent": 92.0,
-            "peak_disk_percent": 97.0,
-            "peak_temperature": 89.0
-        },
-        "anomalies_summary": {
-            "high_cpu_usage_events": [
-                "2023-10-01 12:00:00+00:00",
-                "2023-10-01 22:00:00+00:00",
-                "2023-10-02 03:00:00+00:00",
-                "2023-10-02 08:00:00+00:00",
-                "2023-10-03 19:00:00+00:00",
-                "2023-10-04 10:00:00+00:00",
-                "2023-10-05 01:00:00+00:00",
-                "2023-10-07 03:00:00+00:00"
-            ],
-            "high_memory_usage_events": [
-                "2023-10-01 12:00:00+00:00",
-                "2023-10-02 08:00:00+00:00",
-                "2023-10-04 05:00:00+00:00",
-                "2023-10-08 08:30:00+00:00"
-            ],
-            "high_disk_usage_events": [],
-            "high_latency_events": [
-                "2023-10-01 22:00:00+00:00",
-                "2023-10-02 03:00:00+00:00",
-                "2023-10-02 18:00:00+00:00"
-            ],
-            "high_error_rate_events": [
-                "2023-10-06 07:00:00+00:00"
-            ]
-        },
-        "recommendations": {
-            "cpu_optimization": {
-                "description": "Several events show high CPU usage nearing maximum capacity. To mitigate this, consider implementing:",
-                "actions": [
-                    "Load balancing to distribute workload more evenly across additional resources.",
-                    "Scaling up instances with more CPU resources or implementing auto-scaling policies.",
-                    "Optimizing code and queries to reduce CPU load."
-                ]
-            },
-            "memory_optimization": {
-                "description": "Instances of high memory usage were detected. Consider the following actions:",
-                "actions": [
-                    "Implement memory profiling and optimization techniques for applications.",
-                    "Enhance cache efficiency to reduce memory overhead.",
-                    "Increase memory resources or configure auto-scaling for memory-heavy processes."
-                ]
-            },
-            "disk_optimization": {
-                "description": "While disk usage did not reach critical levels, maintaining optimal performance requires:",
-                "actions": [
-                    "Regular cleanup of temporary and unnecessary files.",
-                    "Utilizing cloud storage solutions for older data to alleviate local disk usage."
-                ]
-            },
-            "latency_optimization": {
-                "description": "There are spikes in latency, indicating potential performance bottlenecks. To address this:",
-                "actions": [
-                    "Analyze and optimize database queries to reduce delay times.",
-                    "Implementing a Content Delivery Network (CDN) to ensure faster access to static resources.",
-                    "Consider reviewing and tuning API configurations for optimal performance."
-                ]
-            },
-            "error_rate_optimization": {
-                "description": "Anomalous error rates detected in some events. To reduce these incidents:",
-                "actions": [
-                    "Implement more robust logging and monitoring to gather error insights.",
-                    "Ensure error handling and fallbacks are effective in all services and applications.",
-                    "Conduct code reviews and testing for service availability and error mitigation."
-                ]
-            },
-            "temperature_control": {
-                "description": "Peak temperatures are high and could affect hardware performance.",
-                "actions": [
-                    "Evaluate and improve cooling solutions for server infrastructure.",
-                    "Ensure proper ventilation in server rooms to prevent overheating.",
-                    "Consider deploying temperature monitoring systems to alert administrators of rising temperatures."
-                ]
-            }
+    "report_generated_at": "2025-09-02T10:47:22.059217+00:00",
+    "system_overview": {
+        "records_analyzed": 500,
+        "warning_events": 74,
+        "critical_events": 68,
+        "analysis_period": {
+            "start_time_utc": "2023-10-01T12:00:00+00:00",
+            "end_time_utc": "2023-10-11T21:30:00+00:00"
         }
-    }
+    },
+    "current_service_status": {
+        "database": "online",
+        "api_gateway": "online",
+        "cache": "online"
+    },
+    "key_performance_indicators": {
+        "latency_ms_p95": 344.05,
+        "error_rate_p95": 0.12,
+        "peak_cpu_percent": 99.0,
+        "peak_memory_percent": 92.0,
+        "peak_disk_percent": 97.0,
+        "peak_temperature_celsius": 89.0
+    },
+    "anomaly_observations": {
+        "cpu_usage": "Frequent spikes reaching 99%, indicating potential CPU bottlenecks",
+        "memory_usage": "Consistently high usage nearing 92%, raising concerns for memory leaks or suboptimal configurations",
+        "latency": "Elevated latency values frequent, suggesting potential service delays possibly due to high load or resource starvation",
+        "disk_usage": "Peaked at 97%, potentially leading to I/O constraints",
+        "temperature": "Noticeable spikes in temperature, suggesting possible cooling issues",
+        "service_degradation": "Multiple instances of service degradation noted, particularly with 'API Gateway' and 'Cache'"
+    },
+    "recommendations": [
+        {
+            "action": "Load Balancing",
+            "details": "Distribute incoming traffic more evenly across servers to reduce CPU and memory strains."
+        },
+        {
+            "action": "CPU Optimization",
+            "details": "Upgrade or scale out the current server configurations to support higher CPU demands, or optimize resource utilization with performance profiling tools."
+        },
+        {
+            "action": "Memory Management",
+            "details": "Investigate potential memory leaks in applications; optimize memory allocations and garbage collection processes."
+        },
+        {
+            "action": "Disk Usage Management",
+            "details": "Increase disk capacity or clean up unnecessary files to prevent storage bottlenecks. Implement data archival and compression strategies."
+        },
+        {
+            "action": "Temperature Control",
+            "details": "Enhance cooling mechanisms in the data center and ensure adequate airflow to manage device temperatures effectively."
+        },
+        {
+            "action": "Service Resilience",
+            "details": "Investigate and resolve root causes of repeated service degradation, possibly by scaling services or optimizing configurations."
+        },
+        {
+            "action": "Monitoring and Alerting",
+            "details": "Implement or improve existing monitoring systems to promptly detect and respond to anomalies and threshold breaches."
+        }
+    ]
 }

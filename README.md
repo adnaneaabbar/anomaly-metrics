@@ -27,6 +27,17 @@ pip install -r requirements.txt
 python app.py
 ```
 
+or you can run everything inside a docker container
+```bash
+# install deps
+docker build -t anomaly-metrics .
+
+docker run --rm \                
+  -v $(pwd)/data:/app/data \
+  -v $(pwd)/output:/app/output \
+  anomaly-metrics
+```
+
 ## Output
 
 ### Anomalies file: [anomalies.csv](/output/anomalies.csv)
