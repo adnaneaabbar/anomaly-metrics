@@ -5,7 +5,6 @@ from langchain.prompts import PromptTemplate
 load_dotenv()
 
 def recommend_actions(report: dict, anomalies_path: str) -> str:
-    # Load anomalies if needed
     with open(anomalies_path, "r") as f:
         anomalies_csv = f.read()
 

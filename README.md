@@ -1,5 +1,3 @@
-# anomaly-metrics
-
 ## Input
 
 ### JSON file snippet:
@@ -29,8 +27,10 @@ pip install -r requirements.txt
 python app.py
 ```
 
+## Output
+
 ### Anomalies file: [anomalies.csv](/output/anomalies.csv)
 ### Generated JSON report: [generated_report.json](/output/generated_report.json)
 ### Generated JSON recommendations: [recs.json](/output/recs.json)
 
-### Trace of the run: [RunnableSequence](https://smith.langchain.com/public/5277bbef-49e0-4314-9126-603fb76689ef/r)
+### Trace of the run: [RunnableSequence](https://smith.langchain.com/public/d9c8df86-70d9-464a-be58-bbc7c6091ac0/r)
