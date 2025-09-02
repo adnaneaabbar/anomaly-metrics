@@ -18,8 +18,13 @@ def generate(report, df: pd.DataFrame, out_dir: Path, recs=None):
     # save recommendations
     if recs:
         try:
-            # if recommendations is a JSON string, parse it
-            rec_json = json.loads(recs)
+            # Remove code block markers if present
+            cleaned_recs = recs.strip()
+            if cleaned_recs.startswith("```json"):
+                cleaned_recs = cleaned_recs[len("```json"):].strip()
+            if cleaned_recs.endswith("```"):
+                cleaned_recs = cleaned_recs[:-3].strip()
+            rec_json = json.loads(cleaned_recs)
         except Exception:
             # if not, save as plain text
             rec_json = {"raw": recs}
