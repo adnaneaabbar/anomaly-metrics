@@ -3,8 +3,6 @@ THRESHOLDS = {
     "memory_usage_high": 90,
     "latency_ms_high": 300,
     "disk_usage_high": 85,
-    "io_wait_high": 10,
-    "active_connections_high": 120,
     "error_rate_high": 0.10,
     "temperature_celsius_high": 85
 }

@@ -8,9 +8,9 @@ def detect_anomalies(df: pd.DataFrame) -> pd.DataFrame:
     out["anomaly_cpu"] = out["cpu_usage"] >= THRESHOLDS["cpu_usage_high"]
     out["anomaly_memory"] = out["memory_usage"] >= THRESHOLDS["memory_usage_high"]
     out["anomaly_disk"] = out["disk_usage"] >= THRESHOLDS["disk_usage_high"]
-    out["anomaly_latency"] = out["latency_ms"] >= THRESHOLDS["latency_high_ms"]
+    out["anomaly_latency"] = out["latency_ms"] >= THRESHOLDS["latency_ms_high"]
     out["anomaly_error_rate"] = out["error_rate"] >= THRESHOLDS["error_rate_high"]
-    out["anomaly_temp"] = out["temperature_celsius"] >= THRESHOLDS["temperature_high"]
+    out["anomaly_temp"] = out["temperature_celsius"] >= THRESHOLDS["temperature_celsius_high"]
 
     # service anomalies
     out["anomaly_db_offline"] = out.get("database_offline", 0) == 1
@@ -31,5 +31,5 @@ def detect_anomalies(df: pd.DataFrame) -> pd.DataFrame:
 
     # apply severity score to each row of the dataframe
     out["severity"] = out.apply(severity, axis=1)
-    
+
     return out
