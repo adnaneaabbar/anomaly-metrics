@@ -29,9 +29,10 @@ python app.py
 
 or you can run everything inside a docker container
 ```bash
-# install deps
+# build image
 docker build -t anomaly-metrics .
 
+# run container
 docker run --rm \                
   -v $(pwd)/data:/app/data \
   -v $(pwd)/output:/app/output \
