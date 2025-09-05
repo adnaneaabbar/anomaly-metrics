@@ -45,4 +45,4 @@ docker run --rm \
 ### Generated JSON report: [generated_report.json](/output/generated_report.json)
 ### Generated JSON recommendations: [recs.json](/output/recs.json)
 
-### Trace of the run: [RunnableSequence](https://smith.langchain.com/public/2c7fb5d0-a56a-49ca-96af-254a7f19aa4f/r)
+### Trace of the run: [RunnableSequence](https://smith.langchain.com/public/47ebb4fc-204d-40fc-8df0-23a1a7065242/r)
